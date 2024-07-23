@@ -1,10 +1,9 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-const sequelize = new Sequelize(
-    "todo_app_db",
-    "postgres",
-    "theskyisbluetoday",
+const sequelize = new Sequelize(process.env.
+AUCTION_DB, process.env.AUCTION_USER,
+process.env.AUCTION_PW,
   {
     host: 'localhost',
     dialect: 'postgres'
