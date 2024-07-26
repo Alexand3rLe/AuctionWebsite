@@ -1,3 +1,3 @@
-CREATE DATABASE IF EXISTS todo_app_db;
+Drop DATABASE IF EXISTS todo_app_db;
 
 CREATE DATABASE todo_app_db;
