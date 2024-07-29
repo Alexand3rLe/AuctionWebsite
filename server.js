@@ -2,7 +2,7 @@ const express = require('express');
 const sequelize = require('./config/connection');
 const controllers = require('./controllers')
 const exphbs = require('express-handlebars');
-// const model = require('./models'); 
+const model = require('./models'); 
 
 
 
@@ -39,8 +39,9 @@ app.get('/users', async (req, res) => {
   });
   
 
-
+sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
+})
 
