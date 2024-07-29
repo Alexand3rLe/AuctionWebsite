@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const api = require('./api');
+const home = require('./home');
 // const Task = require('../models/Task');
 
+router.use('/', home);
 router.use("/api", api);
 
 // router.get('/', async (req, res) => {
@@ -21,22 +23,14 @@ router.use("/api", api);
 // })
 
 
-router.get('/', async (req, res) => {
-    try {
-      const items = await Item.findAll();
-      res.render('index', { items });
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  });
-  
-  router.get('/login', (req, res) => {
-    res.render('login');
-  });
-  
-  router.get('/signup', (req, res) => {
-    res.render('signup');
-  });
+// router.get('/', async (req, res) => {
+//     try {
+//       const items = await Item.findAll();
+//       res.render('index', { items });
+//     } catch (error) {
+//       res.status(500).json({ error: error.message });
+//     }
+//   });
   
   router.get('/auction', (req, res) => {
     res.render('auction');
