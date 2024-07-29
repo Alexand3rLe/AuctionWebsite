@@ -34,8 +34,25 @@ console.log(sanitizedData)
 })
 
 
-router.get("/auction", (req, res) => {
-  res.json('hello!');
-})
-
+router.get('/', async (req, res) => {
+    try {
+      const items = await Item.findAll();
+      res.render('index', { items });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+  
+  router.get('/login', (req, res) => {
+    res.render('login');
+  });
+  
+  router.get('/signup', (req, res) => {
+    res.render('signup');
+  });
+  
+  router.get('/auction', (req, res) => {
+    res.render('auction');
+  });
+  
 module.exports = router;
