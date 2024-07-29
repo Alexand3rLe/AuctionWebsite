@@ -22,12 +22,7 @@ Items.init({
     price: {
         type: DataTypes.INTEGER,
         allowNull: false
-    },
-    status: {
-        type: DataTypes.STRING, 
-        allowNull: false
-    },
-    //picture: {}
+    }
 }, {
     sequelize, 
     freezeTableName: true,
