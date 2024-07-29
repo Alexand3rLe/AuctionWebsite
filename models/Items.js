@@ -23,14 +23,14 @@ Items.init({
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  status: {
-    type: DataTypes.STRING, 
-    allowNull: false
-  },
-  image: {
-    type: DataTypes.STRING, // URL of the image
-    allowNull: true
-  }
+  // status: {
+  //   type: DataTypes.STRING, 
+  //   allowNull: false
+  // },
+  // image: {
+  //   type: DataTypes.STRING, // URL of the image
+  //   allowNull: true
+  // }
 
 }, {
   sequelize, 
