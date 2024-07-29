@@ -1,0 +1,14 @@
+
+<h1>Available Auction Items</h1>
+<div id="items-list">
+  {{#each items}}
+    <div class="item">
+      <h2>{{this.name}}</h2>
+      <img src="{{this.image}}" alt="{{this.name}}" width="200">
+      <p>Description: {{this.description}}</p>
+      <p>Price: ${{this.price}}</p>
+      <p>Status: {{this.status}}</p>
+      <button class="bid-button" data-id="{{this.id}}">Place Bid</button>
+    </div>
+  {{/each}}
+</div>
