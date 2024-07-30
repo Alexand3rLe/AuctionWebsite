@@ -1,94 +1,181 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  
-  .navbar {
-    background-color: #004080;
-    color: white;
-    padding: 1em 0;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  .navbar-menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-item {
-    margin-left: 2em;
-  }
-  
-  .navbar-link {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  .navbar-link:hover {
-    text-decoration: underline;
-  }
-  
-  
-  .main-content {
-    padding: 2em 0;
-    background-color: white;
-    min-height: 80vh;
-  }
-  
-  
-  .footer {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-  }
-  
-  
-  .home-header {
-    text-align: center;
-    padding: 3em 0;
-    background-color: #004080;
-    color: white;
-  }
-  
-  .home-header h1 {
-    font-size: 2.5em;
-  }
-  
-  .home-section {
-    margin: 2em 0;
-  }
-  
-  .home-section h2 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  
-  .home-section p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+
+.navbar {
+  background-color: #004080;
+  color: white;
+  padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-left: 2em;
+}
+
+.navbar-link {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  background-color: #00264d;
+  color: #ffcc00;
+  border-radius: 5px;
+}
+
+
+.main-content {
+  padding: 2em 0;
+  padding-top: 5em; 
+  background-color: white;
+  min-height: 80vh;
+  width: 100%;
+}
+
+
+.footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+}
+
+
+.home-header {
+  text-align: center;
+  padding: 3em 0;
+  background-color: #004080;
+  color: white;
+}
+
+.home-header h1 {
+  font-size: 2.5em;
+}
+
+.header-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.home-section {
+  margin: 2em 0;
+}
+
+.home-section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.home-section p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.item p {
+  margin: 0.5em 0;
+}
+
+.item .bid-button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.item .bid-button:hover {
+  background-color: #00264d;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
