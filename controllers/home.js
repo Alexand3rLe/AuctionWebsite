@@ -6,7 +6,8 @@ const User = require('../models/User');
 router.get('/', async (req, res) => {
   try {
     const allItems = await Item.findAll();
-    res.render('auction', { items: allItems.map(item => item.get({ plain: true })) });
+    res.render('auction', { 
+      items: allItems.map(item => item.get({ plain: true })) });
   } catch (err) {
     res.status(500).json(err);
   }
