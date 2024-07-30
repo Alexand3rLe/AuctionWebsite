@@ -1,3 +1,3 @@
-Drop DATABASE IF EXISTS todo_app_db;
+Drop DATABASE IF EXISTS aurora_auction_db;
 
-CREATE DATABASE todo_app_db;
+CREATE DATABASE aurora_auction_db;
