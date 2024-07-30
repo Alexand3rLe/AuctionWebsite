@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurora Auction</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Auction</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-  {{{nav}}}
-  <main>
-    {{{body}}}
-  </main>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="navbar-brand">Aurora Auction</a>
+                <ul class="navbar-menu">
+                    <li class="navbar-item"><a href="/" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="/auction" class="navbar-link">Auction</a></li>
+                    <li class="navbar-item"><a href="/login" class="navbar-link">Login</a></li>
+                    <li class="navbar-item"><a href="/signup" class="navbar-link">Signup</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+        {{{body}}}
+    </main>
+    <footer class="footer">
+        <p>------</p>
+    </footer>
 </body>
-
 </html>
